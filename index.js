@@ -67,5 +67,5 @@ lang.addEventListener("click", function () {
 // Khác
 
 book.addEventListener("click", function () {
-  window.location.href = "/Final/Booking/booking.html";
+  window.location.href = "./booking.html";
 });
