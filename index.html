@@ -7,18 +7,37 @@
     <link rel="stylesheet" href="./index.css" />
   </head>
   <body>
-    <!--
-        Travel
-        Local storage cart: T/gian, địa điểm đi
-        Trang đăng nhập/đăng ký (hoặt động đc là optional)
-        Trang chủ: Giới thiệu trang, header, footer
-        Trang về các địa điểm ksan (gồm tên kh - số đt khách/chỗ đó - tgian - giá - các địa điểm xquanh - facility - số phòng trống/ko)
-        Chọn qgia ở đâu
-        Filter search
-        JS: Filter, có vụ book phòng tử tế (localStorage)
-        Tối T5 hàng tuần upd
-    -->
-    <!-- Phần cố định -->
+    <!-- Messenger Chat Plugin Code -->
+    <div id="fb-root"></div>
+
+    <!-- Your Chat Plugin code -->
+    <div id="fb-customer-chat" class="fb-customerchat"></div>
+
+    <script>
+      var chatbox = document.getElementById("fb-customer-chat");
+      chatbox.setAttribute("page_id", "115491448301621");
+      chatbox.setAttribute("attribution", "biz_inbox");
+    </script>
+
+    <!-- Your SDK code -->
+    <script>
+      window.fbAsyncInit = function () {
+        FB.init({
+          xfbml: true,
+          version: "v17.0",
+        });
+      };
+
+      (function (d, s, id) {
+        var js,
+          fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s);
+        js.id = id;
+        js.src = "https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js";
+        fjs.parentNode.insertBefore(js, fjs);
+      })(document, "script", "facebook-jssdk");
+    </script>
     <ul class="menubar">
       <li><a href="./index.html" class="menubtn" id="home">Home</a></li>
       <li>
